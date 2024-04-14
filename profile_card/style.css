@@ -1,0 +1,127 @@
+:root {
+  --font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+main {
+  width: calc(100vw - 18px);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile {
+  width: 260px;
+  height: auto;
+  padding: 8px;
+  border-radius: 8px;
+  box-shadow: 0 0 2.9px rgba(0, 0, 0, 0.11), 0 1.6px 3.6px rgba(0, 0, 0, 0.13);
+  background: #f7f3e4;
+
+  img {
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+  }
+
+  h4 {
+    font: 600 16px/24px var(--font-family);
+  }
+
+  h4 + span {
+    font: 500 14px/20px var(--font-family);
+    color: #7e7e7e;
+    margin: 0 0 8px;
+    display: block;
+  }
+
+  span:has(svg) {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    span {
+      font: 400 14px/20px var(--font-family);
+      color: #242424;
+    }
+  }
+
+  p {
+    font: 400 14px/20px var(--font-family);
+    color: #242424;
+    margin: 4px 0 8px;
+  }
+
+  p + div {
+    margin: 0 0 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    div {
+      display: flex;
+      flex-direction: column;
+
+      span {
+        font-family: var(--font-family);
+        font-size: 14px;
+      }
+
+      span:last-child {
+        font-weight: 500;
+      }
+    }
+  }
+
+  p + div + div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.button {
+  font-weight: 500;
+  font-size: 14px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: all 0.2s ease-in;
+}
+
+.button.outline {
+  border: 1px solid black;
+}
+
+.button.outline:hover {
+  color: white;
+  background: black;
+}
+
+.button.filled {
+  color: white;
+  border: 1px solid black;
+  background: black;
+}
+
+.button.filled:hover {
+  color: black;
+  background: white;
+}
